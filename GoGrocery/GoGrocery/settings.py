@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'GoGrocery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Gogrocery',
+        'USER':'root',
+        'PASSWORD':'benjamin41',
+        'HOST':'34.67.124.153',
+        'PORT':'3306',
     }
 }
 
