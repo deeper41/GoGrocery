@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Add Remove Select Box Fields Dynamically using jQuery Ajax in PHP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+  <br />
+  <div class="container">
+   <h3 align="right">PLACE HOLDER de nombre y buenos dias o tardes por la hora</h3>
+   <br />
+   <h4 align="left">PLACE HOLDER nombre de lista</h4>
+   <h4 align="right">PLACE HOLDER de fecha de la lista</h4>
+   
+   <br />
+   <form method="post" id="insert_form">
+    <div class="table-repsonsive">
+     <span id="error"></span>
+     <table class="table table-bordered" id="item_table">
+      <tr>
+       <th>Articulos</th>
+       <th>Precio</th>
+       <th>Tienda</th>
+       <th>URL</th>
+       <th><button type="button" name="add" class="btn btn-success btn-sm add"><span class="glyphicon glyphicon-plus"></span></button></th>
+      </tr>
+     </table>
+     
+    </div>
+   </form>
+  </div>
+ </body>
+</html>
+
+
+<script>
+    $(document).ready(function(){
+     
+     $(document).on('click', '.add', function(){
+      var html = '';
+      html += '<tr>';
+      html += '<td></td>';
+      html += '<td></td>';
+      html += '<td></td>';
+      html += '<td></td>';
+      html += '<td><button type="submit" name="remove" class="btn btn-danger btn-sm remove"><span class="glyphicon glyphicon-minus"></span></button></td></tr>';
+      $('#item_table').append(html);
+     });
+     
+     $(document).on('click', '.remove', function(){
+      $(this).closest('tr').remove();
+     });
+    });
+</script>
+    
