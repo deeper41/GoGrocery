@@ -1,0 +1,64 @@
+
+<div class="modal fade" id="modal_busqueda">
+  <div class="modal-dialog modal-lg" role="document" >
+      <div class="modal-content">
+          <div class="modal_cerrar">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+          </div>
+  
+  
+          <form action="">
+              <div class="modal-header">
+                  <h5 class="modal-title">Busca un producto</h5>
+              </div>
+
+
+
+
+              <div class="modal-body">
+                    <label for="categoria">Elige una categoria:</label>
+                      <select id="categoria" name="categoria">
+                      <option selected="selected" disabled>Seleccione una categoria</option>
+                      <input type="submit" value="Elige Categoria">
+                      </select><br>
+                            
+                         
+                  <label id='lb_sub'for="subcategoria" >Elige una subcategoria:</label>
+                    <select id="subcategoria" >
+                    <option selected="selected" disabled>Seleccione una subcategoria</option>   
+                    <input type="submit" value="Elige Subcategoria">      
+                    </select><br>
+
+                  <label for="f_listan">Escribe el nombre de tu articulo</label><br>
+                    <input type="text" id="f_listan" name="f_listan" value="xxx">
+                    <input type="submit" value="Buscar Articulo"><br>
+                    
+
+
+                    <label for="f_listan">Articulos parecidos</label><br>
+                    <table class="table-hover" id="tabla_artbuscados">
+                      <tr>
+                       <th>Articulos</th>
+                       <th>Precio</th>
+                       <th>Tienda</th>
+                       <th>URL</th>
+                      </tr>
+                     </table>
+                    
+              </div>
+
+
+              <div class="modal-footer">
+                  <input type="submit" value="Listo" data-dismiss="modal" aria-label="Close">
+                  
+              </div>
+          </form>
+  
+  
+  
+      </div>
+  </div>
+</div>
+
