@@ -16,7 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from crud_v_0.views import inicio_view
+from crud_v_0.views import loggin_view
+from crud_v_0.views import forgot_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio_view, name='inicio')
+    path('loggin/', loggin_view),
+    path('forgot/', forgot_view, name='forgot'),
+    path('', inicio_view, name='inicio'),
+    
 ]
